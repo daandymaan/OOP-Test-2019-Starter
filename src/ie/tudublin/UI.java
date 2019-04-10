@@ -81,13 +81,26 @@ public class UI extends PApplet
 	}
 	public void render()
 	{
+		Colours c = colours.get(0);
+		Colours c2 = colours.get(1);
+		Colours c3 = colours.get(2);
+		Colours c4 = colours.get(3);
+		Colours c5 = colours.get(4);
+		Colours c6 = colours.get(5);
+		Colours c7 = colours.get(6);
+		Colours c8 = colours.get(7);
+		Colours c9 = colours.get(8);
+
 		
 		rect(100,100,100,100);
 		
+		rect(125,100,10,100);
+		rect(135,100,10,100);
+		rect(145,100,10,100);
 		rect(100,250,100,100);
 		
 		rect(100,400,100,100);
-		
+
 		rect(100,550,100,100);
 
 			

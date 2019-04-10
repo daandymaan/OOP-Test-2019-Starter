@@ -18,7 +18,14 @@ public class Resistor
     }
     public Resistor(TableRow tr)
     {
-        this(tr.getInt("318"));
+        
+        //tr.getrow would not work with no heading 
+        //could not find a processing guide either 
+        
+    }
+    public String toString()
+    {
+        return "value" + value;
     }
 
     

@@ -11,23 +11,22 @@ public class UI extends PApplet
 {
 	ArrayList<Colours> colours = new ArrayList<Colours>();
 	ArrayList<Resistor> resistors = new ArrayList<Resistor>();
+	String help;
+	String help2;
+	String help3;
 	
+	int size = 150;
 
 	public void loadResistors()
 	{
 		Table table = loadTable("resistors.csv","header");
-		System.out.println(table.getRowCount());
-		int value1 = table.getInt(1, 0);
-		Resistor r = new Resistor(value1);
-		resistors.add(r);
-		int value2 = table.getInt(1, 0);
-		Resistor r2 = new Resistor(value2);
-		resistors.add(r2);
-		int value3 = table.getInt(1, 0);
-		Resistor r3 = new Resistor(value3);
-		resistors.add(r3);
+		System.out.println(table.getString(0, 0));
+		help = table.getString(0, 0);
+		help2 = table.getString(1, 0);
+		help3 = table.getString(2, 0);
 		
-
+		
+		
 		
 	}
 	public void loadColours()
@@ -80,15 +79,28 @@ public class UI extends PApplet
 	{
 		
 	}
+	public void render()
+	{
+		
+		rect(100,100,100,100);
+		
+		rect(100,250,100,100);
+		
+		rect(100,400,100,100);
+		
+		rect(100,550,100,100);
+
+			
+		
+	}
 	
 	public void draw()
 	{	
-		int x;
-		int y;
-		int size = 50;
-		background(255);		
 		
-		rect(150, 100, 150, 150);
+		background(255);	
+		
+		render();
+		
 		
 	}
 }

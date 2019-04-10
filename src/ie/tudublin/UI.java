@@ -20,6 +20,14 @@ public class UI extends PApplet
 	public void loadResistors()
 	{
 		Table table = loadTable("resistors.csv","header");
+		for(TableRow tr:table.rows())
+		{
+			//i dont know why this doesnt work
+			Resistor r = new Resistor (tr.getInt(0));
+			System.out.println(r.toString());
+		}
+
+
 		System.out.println(table.getString(0, 0));
 		help = table.getString(0, 0);
 		help2 = table.getString(1, 0);
@@ -94,9 +102,13 @@ public class UI extends PApplet
 		
 		rect(100,100,100,100);
 		
+		fill(c.getR(),c.getG(),c.getB());
 		rect(125,100,10,100);
+		fill(c2.getR(),c2.getG(),c2.getB());
 		rect(135,100,10,100);
+		fill(c3.getR(),c3.getG(),c3.getB());
 		rect(145,100,10,100);
+		noFill();
 		rect(100,250,100,100);
 		
 		rect(100,400,100,100);

@@ -1,18 +1,26 @@
 package ie.tudublin;
-
-
+import processing.data.Table;
+import processing.data.TableRow;
 
 public class Colours
 {
     private String colour;
-    private int rgb;
+    private int r;
+    private int g;
+    private int b;
     private float value;
 
-    public Colours(String colour, int rgb, float value)
+    public Colours(String colour, int r,int g, int b, float value)
     {
         this.colour = colour;
-        this.rgb = rgb;
+        this.r = r;
+        this.g = g;
+        this.b =b;
         this.value = value;
+    }
+    public Colours(TableRow tr)
+    {
+        this(tr.getString("colour"),tr.getInt("r"),tr.getInt("g"),tr.getInt("b"), tr.getFloat("value"));
     }
 
     /**
